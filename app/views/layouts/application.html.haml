@@ -8,6 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .pc-header
-      .pc-header__inner
+    .default-container
+      = render 'shared/global_header'
+      / = render 'shared/flash'
     \#{yield}
