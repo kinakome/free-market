@@ -48,6 +48,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'payjp'
+gem 'erb2haml'
 
 
 group :development, :test do
