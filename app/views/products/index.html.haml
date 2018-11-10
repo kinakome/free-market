@@ -1,0 +1,158 @@
+.default-container
+  = render 'shared/global_header'
+  .main
+    .main-visual
+      .main-visual-contents
+        .main-visual-contents__content
+          %h2.super-title
+            スマホでかんたん
+            %br フリマアプリ
+          %p.sub-title
+            メルカリはスマホカメラからすぐに出品できる
+            %br 購入時も安心な独自システムのアプリです
+          .store-btns
+            = link_to do
+              = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?582886128"
+
+            = link_to  do
+              = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?582886128", class: "left"
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?582886128", class: "main-visual-contents__image"
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップカテゴリー
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "レディース 新着アイテム"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m71763423568_1.jpg?1538061971"
+                .items-box__body
+                  %h3.items-box__name
+                    ミッシュマッシュ今期ハギフレアカラースカート
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "メンズ 新着アイテム"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m71580435769_1.jpg?1537596996"
+                .items-box__body
+                  %h3.items-box__name
+                    ポールスミス ジャケット  ベージュ
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ベビー・キッズ 新着アイテム"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m25346160732_1.jpg?1541828636"
+                .items-box__body
+                  %h3.items-box__name
+                    ベビー枕 プーさん
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "コスメ・香水・美容 新着アイテム"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m61896692403_1.jpg?1541224981"
+                .items-box__body
+                  %h3.items-box__name
+                    シャネル
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップブランド
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "シャネル"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m53937193795_1.jpg?1541828719"
+                .items-box__body
+                  %h3.items-box__name
+                    シャネル
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ルイヴィトン"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m49305038897_1.jpg?1541828679"
+                .items-box__body
+                  %h3.items-box__name
+                    ルイヴィトン
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+
+  .app-banner
+    .app-banner__inner
+      .app-banner__inner__contents
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード！
+        .app-banner__inner__contents__icons
+          %figure
+            = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1016580576", width: 68
+          %ul
+            %li
+              = link_to image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?1016580576"
+            %li
+              = link_to image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1016580576"
+      %figure.phones-image
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1016580576"
+
+  = render 'shared/global_footer'

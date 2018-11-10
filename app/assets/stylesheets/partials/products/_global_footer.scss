@@ -1,0 +1,92 @@
+.global-footer{
+  padding: 60px 0;
+  text-align: center;
+  background: #212121;
+  color: #fff;
+  nav{
+    width: 1020px;
+    margin: 0 auto;
+    ul{
+      .footer-cell{
+        display: inline-block;
+        width: 23%;
+        margin: 0 2% 0 0;
+        vertical-align: top;
+        h2{
+          color: #fff;
+          font-size: 16px;
+          line-height: 1.4;
+              margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        .footer-contents-lang{
+          a{
+            // text-align: center;
+            width: auto;
+            margin: 0 auto;
+            opacity: .3;
+            height: 22px;
+            padding-bottom: 2px;
+            margin-top: 16px;
+            &:first-child {
+              margin-top: 24px;
+            }
+          }
+          img{
+            height:100%;
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+  }
+  .footer-logo{
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+      img{
+        display: block;
+        vertical-align: middle;
+        width: 124px;
+        height: 33px;
+        margin: 0 auto;
+      }
+    }
+    .footer-copyright{
+      margin: 8px 0 0;
+      text-align: center;
+    }
+}
+.footer-sell-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 160px;
+  height: 160px;
+  color: #fff;
+
+  font-size: 22px;
+  text-align: center;
+  background: #ea352d;
+  border-radius: 50%;
+
+  div {
+    margin: 32px 0 0;
+  }
+
+  i {
+    margin: 8px 0 0;
+    font-size: 54px;
+  }
+}
