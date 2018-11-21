@@ -12,6 +12,9 @@
         width: 23%;
         margin: 0 2% 0 0;
         vertical-align: top;
+        li:first-child {
+          margin: 24px 0 0;
+        }
         h2{
           color: #fff;
           font-size: 16px;

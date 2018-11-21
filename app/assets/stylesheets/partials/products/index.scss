@@ -60,18 +60,10 @@
         line-height: 1.4;
         text-align: center;
       }
-      .items-box-container{
-        &__name{
-          text-align: center;
-          margin:26px 11px;
-          h3{
-            color: #0099e8;
-            text-decoration: none;
-            text-align: center;
-                font-size: 22px;
-          }
-        }
-      }
+    }
+    .view-all{
+      float:right;
+      padding: 0px 60px 30px;
     }
   }
   .app-banner{
@@ -90,10 +82,34 @@
         -webkit-transform: translate(0, -50%);
         transform: translate(0, -50%);
         h2{
-
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 24px;
+        }
+        p{
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 35px;
+          margin: 10px 0 0;
         }
         &__icons{
-
+          margin: 20px 0 0;
+          figure{
+            vertical-align: middle;
+            float: left;
+          }
+          ul{
+              float: left;
+              margin: 0 0 0 24px;
+              line-height: 68px;
+            li{
+              float: left;
+              img{
+                vertical-align: middle;
+              }
+            }
+            li:last-child {
+              margin: 0 0 0 16px;
+            }
+          }
         }
       }
       .phones-image {
