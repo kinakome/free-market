@@ -2,3 +2,101 @@
   .pc-header__inner
     .inner-top
       .inner-top__logo
+        = link_to root_path do
+          = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?582886128", width:"134", height: "36"
+      %form.inner-top__form
+        %input{type: "search", placeholder: "キーワードから探す"}
+          = fa_icon 'search'
+
+    .inner-nav
+      .l-left
+        %ul.nav-lists
+          %li
+            %h2
+              = link_to "カテゴリーから探す"
+            %ul.nav-parent-lists
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "メンズ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "ベビー・キッズ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "インテリア・住まい・小物"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "本・音楽・ゲーム"
+              %li.nav-parent-lists__list
+                %h3
+                = link_to "おもちゃ・ホビー・グッズ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "コスメ・香水・美容"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "家電・スマホ・カメラ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "スポーツ・レジャー"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "ハンドメイド"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "チケット"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "自動車・オートバイ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "その他"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "カテゴリー一覧"
+          %li
+            %h2
+              = link_to "ブランドから探す"
+            %ul.nav-parent-lists
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "シャネル"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "ナイキ"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "ルイ ヴィトン"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "シュプリーム"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "アディダス"
+              %li.nav-parent-lists__list
+                %h3
+                  = link_to "ブランド一覧"
+      .l-right
+        %ul.login-nav-lists
+          - if user_signed_in?
+            %li
+              = link_to "", class: "login-nav-lists__signed-in-elements" do
+                .login-nav-lists__icon
+                  %figure
+                    %div
+                      = image_tag '//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png', width: 32
+                .login-nav-lists__mypage マイページ
+            %li
+              = link_to "", class: "login-nav-lists__signed-in-elements" do
+                = fa_icon "bell"
+                %span お知らせ
+            %li
+              = link_to "", class: "login-nav-lists__signed-in-elements" do
+                = fa_icon "check"
+                %span やることリスト
+          - else
+            %li
+              = link_to "ログイン", new_user_session_path, class: "login-nav-lists__btn login-nav-lists__btn-sign-in"
+            %li
+              = link_to "新規会員登録", "", class: "login-nav-lists__btn  login-nav-lists__btn-sign-up"
+
