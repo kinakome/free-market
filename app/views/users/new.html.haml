@@ -9,7 +9,7 @@
       .single-panel__inner
         .single-panel__btns
           / = link_to user_facebook_omniauth_authorize_path, class: "sns-btn sns-btn-facebook" do
-          = link_to "", class: "sns-btn sns-btn-mail" do
+          = link_to new_user_registration_path, class: "sns-btn sns-btn-mail" do
             = fa_icon "envelope"
             メールアドレスで登録
           = link_to "", class: "sns-btn sns-btn-facebook" do
