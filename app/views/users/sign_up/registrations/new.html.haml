@@ -9,22 +9,22 @@
       .single-panel__inner
         .single-panel__contents
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-            .form-group
+            .form-group#first
               = f.label :nickname, "ニックネーム"
               %span.form-require 必須
-              = f.text_field :nickname, class: "input-default input-with-margin"
+              = f.text_field :nickname, class: "input-default input-with-margin", placeholder: "例) メルカリ太郎"
             .form-group
               = f.label :ecmail, "メールアドレス"
               %span.form-require 必須
-              = f.email_field :email, class: "input-default input-with-margin"
+              = f.email_field :email, class: "input-default input-with-margin", placeholder: "PC・携帯ちらでも可"
             .form-group
               = f.label :password, "パスワード"
               %span.form-require 必須
-              = f.password_field :password, class: "input-default input-with-margin"
+              = f.password_field :password, class: "input-default input-with-margin", placeholder: "6文字以上"
             .form-group
               = f.label :password_confirmaion, "パスワード(確認)"
               %span.form-require 必須
-              = f.password_field :password_confirmation, autocomplete: "off", class: "input-default input-with-margin"
+              = f.password_field :password_confirmation, autocomplete: "off", class: "input-default input-with-margin", placeholder: "6文字以上"
             = f.submit "次へ進む", class: 'red-submit-btn'
 
   = render 'shared/single_footer'
