@@ -21,6 +21,15 @@
     font-size: 12px;
     vertical-align: top;
   }
+  .form-arbitrary{
+    background: #ccc;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
   //エラー時に作成されるブロック要素のせいでレイアウトが崩れるからinline化
   .field_with_errors{
     display: inline;
