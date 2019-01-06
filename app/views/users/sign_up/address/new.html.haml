@@ -8,21 +8,31 @@
 
       .single-panel__inner
         .single-panel__contents
-          = form_with(model: @address, url: users_sign_up_address_index_path, local: true) do |f|
+          = form_for @address, url: users_sign_up_address_index_path, local: true do |f|
             .form-group#first
               = f.label :name, "お名前"
               %span.form-require 必須
-              = f.text_field :family_name, class: "input-default input-with-margin"
-              = f.text_field :first_name, class: "input-default input-with-margin"
+              = f.text_field :family_name, class: "input-default inut-with-margin", placeholder: "例)  山田"
+              .valid-error-message
+                = family_name_valid
+              = f.text_field :first_name, class: "input-default input-with-margin", placeholder: "例)  彩"
+              .valid-error-message
+                = first_name_valid
             .form-group
               = f.label :name_kana, "お名前カナ"
               %span.form-require 必須
-              = f.text_field :family_name_kana, class: "input-default input-with-margin"
-              = f.text_field :first_name_kana, class: "input-default input-with-margin"
+              = f.text_field :family_name_kana, class: "input-default input-with-margin", placeholder: "例)  ヤマダ"
+              .valid-error-message
+                = family_name_kana_valid
+              = f.text_field :first_name_kana, class: "input-default input-with-margin", placeholder: "例)  アヤ"
+              .valid-error-message
+                = first_name_kana_valid
             .form-group
               = f.label :zipcode, "郵便番号"
               %span.form-require 必須
-              = f.text_field :zipcode, class: "input-default input-with-margin"
+              = f.text_field :zipcode, class: "input-default input-with-margin", placeholder: "例)  123-4567"
+              .valid-error-message
+                = zipcode_valid
             .form-group
               = f.label :prefecture, "都道府県"
               %span.form-require 必須
@@ -31,19 +41,23 @@
             .form-group
               = f.label :city, "市区町村"
               %span.form-require 必須
-              = f.text_field :city, class: "input-default input-with-margin"
+              = f.text_field :city, class: "input-default input-with-margin", placeholder: "例)  横浜市緑区"
+              .valid-error-message
+                = city_valid
             .form-group
               = f.label :block_number, "番地"
               %span.form-require 必須
-              = f.text_field :block_number, class: "input-default input-with-margin"
+              = f.text_field :block_number, class: "input-default input-with-margin", placeholder: "例)  青山1-1-1"
+              .valid-error-message
+                = block_number_valid
             .form-group
               = f.label :building_name, "建物名"
               %span.form-arbitrary 任意
-              = f.text_field :building_name, class: "input-default input-with-margin"
+              = f.text_field :building_name, class: "input-default input-with-margin", placeholder: "例)  柳ビル103"
             .form-group
               = f.label :phone_number, "電話"
               %span.form-arbitrary 任意
-              = f.text_field :phone_number, class: "input-default input-with-margin"
-            = f.submit "次へ進む", class: 'red-submit-btn'
+              = f.text_field :phone_number, class: "input-default input-with-margin", placeholder: "例)  09012345678"
+              = f.submit "次へ進む", class: 'red-submit-btn'
 
   = render 'shared/single_footer'

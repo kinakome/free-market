@@ -4,10 +4,12 @@ class Users::SignUp::AddressController < ApplicationController
   end
 
   def create
-    @address = Address.new(address_params)
-    binding.pry
+    @address = Address.create(address_params)
+    # binding.pry
     if @address.save
       redirect_to users_sign_up_payment_methods_path
+    else
+      render :new
     end
   end
 
