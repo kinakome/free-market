@@ -5,7 +5,6 @@ class Users::SignUp::AddressController < ApplicationController
 
   def create
     @address = Address.create(address_params)
-    # binding.pry
     if @address.save
       redirect_to users_sign_up_payment_methods_path
     else
