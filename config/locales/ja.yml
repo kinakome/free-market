@@ -2,3 +2,22 @@ ja:
   recaptcha:
     errors:
       verification_failed: '選択してください'
+  activerecord:
+    errors:
+      models:
+        address:
+          attributes:
+            family_name:
+              blank: '入力してください'
+            first_name:
+              blank: '入力してください'
+            family_name_kana:
+              blank: '入力してください'
+            first_name_kana:
+              blank: '入力してください'
+            zipcode:
+              blank: '入力してください'
+            city:
+              blank: '入力してください'
+            block_number:
+              blank: '入力してください'
