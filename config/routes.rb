@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   namespace :users do
     namespace :sign_up do
       get 'address', to: 'address#new'
-      # get 'payment_methods', to: 'payment_methods#new'
+      get 'payment_methods', to: 'payment_methods#new'
       get 'registrations', to: 'registrations#new'
       resources :address, only: [:create]
-      # resources :payment_methods, only: [:create]
+      resources :payment_methods, only: [:create]
       # resources :done, only: [:index]
     end
   end
