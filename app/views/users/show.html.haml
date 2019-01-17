@@ -1,0 +1,187 @@
+.default-container
+  = render 'shared/global_header'
+  .breadcrumbs-wrapper
+    - breadcrumb :mypage
+    = breadcrumbs style: :ul, separator: '>'
+  .common-container
+    .mypage-content
+      .mypage-content__user-icon
+        = link_to "" do
+          %figure
+            = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: 60
+          %h2
+            = current_user.nickname
+          .mypage-content__number
+            .mypage-content__number__item
+              評価
+              %span 0
+            .mypage-content__number__item
+              出品数
+              %span 0
+      .mypage-tab-container.mypage-tab-container--notification
+        %ul.mypage-tabs#news-tab
+          %li.active
+            %h3
+              お知らせ
+          %li
+            %h3
+              やることリスト
+        .mypage-tab-content
+          %ul.mypage-tab-panel#news-menu
+            %li.mypage-tab-panel-list.active
+              %ul
+                - 5.times do
+                  %li
+                    = link_to "", class: "mypage-item-link" do
+                      %figure
+                        = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", width: 48
+                      .mypage-item-link__body
+                        %span  【あと2日】対象カテゴリーが売れたら“必ず“ポイントがもらえるキャンペーン開催中
+                        .mypage-date
+                          = fa_icon "clock-o"
+                          2日前
+                      .right-icon
+                        = fa_icon "chevron-right"
+                %li.mypage-go-list
+                  = link_to "" , class: 'mypage-go-link' do
+                    一覧を見る
+            %li.mypage-tab-panel-list.mypage-item-not-found
+              過去に取引した商品がありません
+
+      .mypage-tab-container
+        %h2.mypage-tab-head 購入した商品
+        %ul.mypage-tabs#product-tab
+          %li.active
+            %h3
+              取引中
+          %li
+            %h3
+              購入した商品
+        .mypage-tab-content
+          %ul.mypage-tab-panel#product-menu
+            %li.mypage-tab-panel-list.mypage-item-not-found.active
+              取引中の商品がありません
+            %li.mypage-tab-panel-list.mypage-item-not-found
+              過去に取引した商品がありません
+
+
+    .common-side
+      .common-nav
+        %ul.common-nav__list
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              マイページ
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              お知らせ
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              やることリスト
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              いいね！一覧
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              出品する
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              出品した商品 - 出品中
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              出品した商品 - 取引中
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              出品した商品 - 売却済み
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              購入した商品 - 取引中
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              購入した商品 - 過去の取引
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              ニュース一覧
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              評価一覧
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              ガイド
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              お問い合わせ
+              = fa_icon 'chevron-right'
+        %h3.common-nav__head 売り上げ・ポイント
+        %ul.common-nav__list
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              売り上げ・振込申請
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              ポイント
+              = fa_icon 'chevron-right'
+        %h3.common-nav__head 設定
+        %ul.common-nav__list
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              プロフィール
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              住所変更
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              支払い方法
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              メール/パスワード
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              本人情報
+              = fa_icon 'chevron-right'
+          %li
+            = link_to "" , class: 'common-nav__item' do
+              電話番号の確認
+              = fa_icon 'chevron-right'
+          %li
+            = link_to destroy_user_session_path, method: :delete, class: 'common-nav__item' do
+              ログアウト
+              = fa_icon 'chevron-right'
+      .common-ad.common-ad--with-margin-top
+        = link_to "" do
+          = image_tag ''
+
+  .app-banner
+    .app-banner__inner
+      .app-banner__inner__contents
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード！
+        .app-banner__inner__contents__icons
+          %figure
+            = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1016580576", width: 68
+          %ul
+            %li
+              = link_to image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?1016580576"
+            %li
+              = link_to image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1016580576"
+      %figure.phones-image
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1016580576"
+
+  = render 'shared/global_footer'
