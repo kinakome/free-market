@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
-  resources :users, only: [:edit, :new]
+  resources :users, only: [:edit, :new, :show]
 
   namespace :users do
     namespace :sign_up do

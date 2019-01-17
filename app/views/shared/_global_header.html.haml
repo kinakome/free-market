@@ -80,16 +80,41 @@
         %ul.login-nav-lists
           - if user_signed_in?
             %li
-              = link_to "", class: "login-nav-lists__signed-in-elements" do
-                .login-nav-lists__icon
-                  %figure
-                    %div
-                      = image_tag '//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png', width: 32
-                .login-nav-lists__mypage マイページ
+              = link_to user_path(current_user.id), class: "login-nav-lists__signed-in-elements" do
+
+                = image_tag '//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png', width: 32
+                %span#mypage マイページ
+              / %ul.nav-parent-lists
+              /   %li.nav-parent-lists__list
+              /     %h3
+              /       = link_to "メンズ"
+              /   %li.nav-parent-lists__list
+              /     %h3
+              /       = link_to "ベビー・キッズ"
+              /   %li.nav-parent-lists__list
+              /     %h3
+              /       = link_to "インテリア・住まい・小物"
+              /   %li.nav-parent-lists__list
+              /     %h3
+              /       = link_to "本・音楽・ゲーム"
+
+
             %li
               = link_to "", class: "login-nav-lists__signed-in-elements" do
                 = fa_icon "bell"
                 %span お知らせ
+              / %ul.nav-parent-lists
+              /   - 5.times do
+              /     %li
+              /       = link_to "", class: "mypage-item-link" do
+              /         %figure
+              /           = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", width: 48
+              /           .mypage-item-link__body
+              /             %span  【あと2日】対象カテゴリーが売れたら“必ず“ポイントがもらえるキャンペーン開催中
+              /             .mypage-date
+              /               = fa_icon "clock-o"
+              /               2日前
+
             %li
               = link_to "", class: "login-nav-lists__signed-in-elements" do
                 = fa_icon "check"

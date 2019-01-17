@@ -1,0 +1,191 @@
+.common-container{
+  margin: 40px auto 0;
+  width: 1020px;
+  padding: 0 0 40px;
+  @include clearFix;
+  .mypage-content{
+    width: 700px;
+    float: right;
+    &__user-icon{
+      height: 200px;
+      background-image: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?62468441);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+      position: relative;
+      a{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+        color: #333;
+        img{
+          overflow: hidden;
+          width: 60px;
+          height: 60px;
+          margin: 0 auto;
+          border-radius: 50%;
+          display:block;
+        }
+        h2{
+          display:block;
+          margin: 8px 0 0 0;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.4;
+        }
+      }
+    }
+    &__number{
+      margin: 8px 0 0;
+      font-size: 0;
+      text-align: center;
+      &__item{
+        display: inline-block;
+        font-size: 14px;
+          margin: 0 0 0 8px;
+        span{
+          font-weight: 600;
+          margin: 0 0 0 8px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .mypage-tab-container{
+    background: #fff;
+    margin-bottom: 40px;
+    .mypage-tabs{
+      border: 0;
+      background: #eee;
+      height: 74px;
+      font-size: 0;
+      li{
+        float:left;
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        height: 74px;
+        h3{
+          font-size: 22px;
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px;
+        }
+      }
+      .active{
+        background: #fff;
+        border-top: 2px solid #ea352d;
+      }
+    }
+    .mypage-tab-content{
+      .mypage-tab-panel{
+        &-list{
+          display:none;
+        }
+        .active{
+          display: block;
+        }
+        .mypage-go-list{
+          padding: 16px;
+          .mypage-go-link{
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+            background: #eee;
+            color: #333;
+            line-height: 56px;
+            text-align: center;
+          }
+        }
+      }
+      .mypage-item-not-found{
+        background-image: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?8577393);
+        padding: 160px 0 60px;
+        background-repeat: no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        text-align: center;
+        font-size: 16px;
+        color: #ccc;
+      }
+      li{
+        border-bottom: 1px solid #eee;
+        figure{
+          float: left;
+        }
+        .right-icon{
+          float:right;
+          bottom: 3px;
+        }
+        a{
+          display: block;
+          min-height: 80px;
+          padding: 16px;
+          color: #333;
+        }
+        .mypage-item-link__body{
+          margin:0 40px 0 68px;
+          span{
+            overflow: hidden;
+            display: block;
+            display: -webkit-box;
+            max-height: 4.4em;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+          }
+          i{
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .mypage-tab-head{
+    padding: 0 16px;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 72px;
+  }
+}
+.common-side{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+  .common-nav{
+    h3{
+      font-size:16px;
+      margin-bottom: 8px;
+    }
+    .common-nav__list{
+      margin-bottom: 40px;
+      li{
+        position: relative;
+        display: block;
+        min-height: 48px;
+        background: #fff;
+        border-top: 1px solid #eee;
+        a{
+          color: #333;
+          display:block;
+          width:100%;
+          padding: 16px;
+          i{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}
