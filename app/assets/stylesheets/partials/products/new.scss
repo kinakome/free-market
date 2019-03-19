@@ -1,0 +1,308 @@
+.sell-form{
+  border-top: 1px solid #eee;
+  @include clearFix;
+  margin-bottom: 40px;
+
+  .sell-upload-box{
+    width: 620px;
+    padding: 40px;
+    .sell-upload-box__head{
+      font-size: 16px;
+      .form-require{
+        background: #ea352d;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+    .hidden{
+      display:none;
+    }
+    p{
+      margin: 8px 0 0;
+      line-height: 1.5;
+    }
+    .sell-dropbox-container{
+      display: block;
+      width: 620px;
+      margin: 16px auto 0;
+      min-height: 184px;
+      @include clearFix;
+      .sell-dropbox-container-main{
+        display:inline-block;
+      }
+      label:first-child{
+          margin-left:0;
+        }
+      .sell-upload-items{
+        width: 140px;
+        height: 184px;
+        // float:left;
+        border: 1px solid #eee;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        background: #f5f5f5;
+        margin-left: 15px;
+        .sell-upload-figure{
+          height: 138px;
+          // line-height: 140px;
+          position: relative;
+          overflow: hidden;
+          img{
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+          }
+        }
+        .sell-upload-button{
+          font-size: 14px;
+          a{
+            display: inline-block;
+            width: 50%;
+            background: #f5f5f5;
+            line-height: 44px;
+            text-align: center;
+            color: #0099e8;
+            text-decoration: none;
+            float: left;
+          }
+          .sell-upload-remove{
+            border-left: 1px solid #eee;
+          }
+        }
+      }
+      #first{
+        margin-left: 0px;
+      }
+      .sell-upload-drop-box{
+        float: right;
+        width: 100%;
+        margin: 0;
+        min-height: 184px;
+        padding: 40px;
+        background: #f5f5f5;
+        border: 1px dashed #ccc;
+        font-size: 0;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        .visible-pc{
+          position: absolute;
+          top: 50%;
+          left: 16px;
+          right: 16px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.5;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          pointer-events: none;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+.sell-content{
+  padding: 40px;
+  border-top: 1px solid #eee;
+  @include clearFix;
+  .form-group{
+    margin: 40px 0 0;
+    @include clearFix;
+    position: relative;
+  }
+  #first{
+    margin:0px;
+  }
+  .shipping_method{
+    display: none;
+  }
+  #size-form{
+    display: none;
+  }
+  #brand-form{
+    display: none;
+  }
+  .sub-category{
+    display: none;
+    margin-top: 5px;
+  }
+  label{
+    font-weight: 600;
+    display: inline-block;
+  }
+  .form-require{
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .form-arbitrary{
+    background: #ccc;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .input-default{
+    width: 100%;
+    margin: 8px 0 0;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .textarea-default{
+    margin: 8px 0 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 104px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .select-wrap{
+    position: relative;
+    margin-top: 8px;
+    .select-default{
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      height: 48px;
+      padding: 0 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      cursor: pointer;
+      outline: 0;
+      -webkit-appearance: none;
+    }
+    i{
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      z-index: 2;
+      color: #888;
+      font-size: 15px;
+      transform: translate(0, -50%);
+    }
+  }
+  .sell-content__head{
+    float: left;
+    color: #888;
+    font-size: 14px;
+  }
+  .sell-content__formbox{
+    float: right;
+    width: 400px;
+    margin: 0;
+  }
+  .sell-price__label{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    line-height: 48px;
+  }
+  .sell-price__input{
+    float:right;
+    width: 50%;
+    text-align: right;
+    div{
+      display: inline-block;
+      width: 80%;
+      margin: 0 0 0 5%;
+      .input-default{
+        margin: 0px;
+      }
+    }
+  }
+  .sell-price__tax{
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+    @include clearFix;
+    margin-top: 24px;
+    .left-side{
+      float:left;
+      &--bold{
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .right-side{
+      float:right;
+      &--bold{
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  #profit{
+    margin-top:0px;
+  }
+  p{
+    line-height: 1.5;
+  }
+  .red-submit-btn{
+    margin: 40px 0 0;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+  }
+  .grey-cancel-btn{
+    display: block;
+    width: 280px;
+    margin: 24px auto 0;
+    background: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    transition: all ease-out .3s;
+    cursor: pointer;
+  }
+  .sell-brand-suggest{
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    max-height: 280px;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.64);
+    width: 400px;
+    display: block;
+    li{
+      padding: 16px 8px;
+      font-size: 14px;
+      display: block;
+      width: 400px;
+      height: 46px;
+
+    }
+  }
+}

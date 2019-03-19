@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_06_091155) do
+ActiveRecord::Schema.define(version: 2019_01_27_071339) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "family_name", null: false
@@ -29,9 +29,64 @@ ActiveRecord::Schema.define(version: 2019_01_06_091155) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
+  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.index ["name"], name: "index_brands_on_name"
+  end
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image", null: false
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_images_on_product_id"
+  end
+
+  create_table "large_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "genre"
+  end
+
+  create_table "middle_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "genre"
+    t.bigint "large_category_id"
+    t.index ["large_category_id"], name: "index_middle_categories_on_large_category_id"
+  end
+
+  create_table "payment_methods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "payjp_customer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_payment_methods_on_user_id"
+  end
+
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "detail", null: false
+    t.string "condition", null: false
+    t.string "size", null: false
+    t.integer "shipping_cost", null: false
+    t.string "shipping_from", null: false
+    t.integer "shipping_date", null: false
+    t.bigint "user_id"
+    t.string "shipping_method", null: false
+    t.bigint "large_category_id"
+    t.bigint "middle_category_id"
+    t.bigint "small_category_id"
+    t.string "brand"
+    t.index ["large_category_id"], name: "index_products_on_large_category_id"
+    t.index ["middle_category_id"], name: "index_products_on_middle_category_id"
+    t.index ["small_category_id"], name: "index_products_on_small_category_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
+  end
+
+  create_table "small_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "genre"
+    t.bigint "middle_category_id"
+    t.index ["middle_category_id"], name: "index_small_categories_on_middle_category_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -53,4 +108,8 @@ ActiveRecord::Schema.define(version: 2019_01_06_091155) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "images", "products"
+  add_foreign_key "middle_categories", "large_categories"
+  add_foreign_key "payment_methods", "users"
+  add_foreign_key "small_categories", "middle_categories"
 end
